@@ -1,29 +1,42 @@
+import java.util.Arrays;
+
 public class Disciplina {
     private String nomeDisciplina;
     private int horas;
     private double[] notas;
-    private int quantidadeProvas;
-    private double somaNotas;
+
     public Disciplina(String nomeDisciplina) {
         this.horas = 0;
-        this.notas = new double[4];
-        this.quantidadeProvas = 0;
-        this.somaNotas = 0;
+        this.notas = new double[]{0, 0, 0, 0};
     }
 
     public void cadastraHoras(int horas) {
         this.horas = horas;
     }
 
-    public void cadastraNota (int numProva, double nota) {
-        this.notas[quantidadeProvas] = nota;
-        this.quantidadeProvas = numProva;
-        this.somaNotas += nota;
+    public void cadastraNota (int id, double nota) {
+        this.notas[id-1] = nota;
     }
 
-    public String aprovado() {
-        double media = somaNotas / quantidadeProvas;
-        if (media >= 7)
+    private double calculaMedia() {
+        double soma = 0;
+        for (int i = 0; i < this.notas.length; i++) {
+            soma += this.notas[i];
+        }
+        return (soma / 4);
+    }
+
+    public boolean aprovado() {
+        double media = calculaMedia();
+        if (media >= 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public String toString() {
+        return this.nomeDisciplina + " " + this.horas + " " + calculaMedia() + " " + Arrays.toString(this.notas);
     }
 
 }
