@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package lab02;
 
 public class RegistroResumos {
     private String[] resumos;

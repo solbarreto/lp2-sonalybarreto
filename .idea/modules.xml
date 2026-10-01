@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CoISA/CoISA.iml" filepath="$PROJECT_DIR$/CoISA/CoISA.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/lp2-sonalybarreto.git.iml" filepath="$PROJECT_DIR$/.idea/lp2-sonalybarreto.git.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/lp2-sonalybarreto.iml" filepath="$PROJECT_DIR$/.idea/lp2-sonalybarreto.iml" />
     </modules>
   </component>
 </project>

@@ -1,3 +1,5 @@
+package lab02;
+
 import java.util.Arrays;
 
 public class Disciplina {
@@ -35,6 +37,7 @@ public class Disciplina {
         }
     }
 
+    @Override
     public String toString() {
         return this.nomeDisciplina + " " + this.horas + " " + calculaMedia() + " " + Arrays.toString(this.notas);
     }
